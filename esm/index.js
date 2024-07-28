@@ -60,7 +60,7 @@ function rollbarSourcemaps({
       rollbarEndpoint
     },
     name: 'vite-plugin-rollbar',
-    resolveConfig(resolvedConfig) {
+    configResolved(resolvedConfig) {
       config = resolvedConfig;
     },
     async writeBundle() {
