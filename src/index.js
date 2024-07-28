@@ -48,7 +48,7 @@ export default function rollbarSourcemaps({
   ignoreUploadErrors = true,
   base = '/'
 }) {
-  let config;
+  let config
   return {
     localProps: {
       accessToken,
@@ -59,10 +59,10 @@ export default function rollbarSourcemaps({
     },
     name: 'vite-plugin-rollbar',
     resolveConfig(resolvedConfig) {
-      config = resolvedConfig;
+      config = resolvedConfig
     },
     async writeBundle() {
-      const outputDir = config.build.outDir;
+      const outputDir = config.build.outDir
       const files = await glob('./**/*.map', { cwd: outputDir })
       const sourcemaps = files
         .map((file) => {
